@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 body {
@@ -400,8 +401,8 @@ h1 {
 
 .impact-list article {
   display: grid;
-  grid-template-columns: minmax(170px, 0.32fr) 1fr;
-  gap: 28px;
+  grid-template-columns: minmax(390px, 0.42fr) 1fr;
+  gap: 34px;
   align-items: center;
   border-top: 1px solid rgba(21, 32, 34, 0.11);
   padding: 28px 0;
@@ -409,8 +410,9 @@ h1 {
 
 .impact-list strong {
   color: var(--teal);
-  font-size: clamp(2rem, 5vw, 4.2rem);
-  line-height: 1;
+  font-size: clamp(2rem, 4vw, 3.65rem);
+  line-height: 1.04;
+  overflow-wrap: normal;
 }
 
 .impact-list span {
@@ -547,6 +549,11 @@ h1 {
   .capability-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .impact-list article {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -572,7 +579,6 @@ h1 {
 
   .hero-stats,
   .capability-grid,
-  .impact-list article,
   .timeline article {
     grid-template-columns: 1fr;
   }
